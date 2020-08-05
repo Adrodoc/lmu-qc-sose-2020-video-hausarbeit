@@ -49,7 +49,12 @@
 
 \section{Aufgabe 1a}
 
-\begin{frame}{}
+\begin{frame}{Aufgabe}
+Geben Sie einen QuBit-Zustand zur Basis $\{\ket{0}, \ket{1}\}$ an, bei welchem die
+Wahrscheinlichkeit $\ket{+}$ zu messen 20\% beträgt.
+\end{frame}
+
+\begin{frame}{Zustand in Hadamard Basis}
 Beispiel für solch einen Zustand in der Basis $\{\ket{+}, \ket{-}\}$ (Hadamard Basis).
 \[
 \begin{aligned}
@@ -69,7 +74,7 @@ $\Rightarrow$ Ein Beispiel für $\hat{\beta}$ ist $\frac{2}{\sqrt5}$\\
 $\Rightarrow$ Ein Beispiel für $\Psi$ ist $\frac{1}{\sqrt5} \ket{+} + \frac{2}{\sqrt5} \ket{-}$\\
 \end{frame}
 
-\begin{frame}{}
+\begin{frame}{Zustand in normaler Basis}
 Für $\ket{\Phi} = \frac{1}{\sqrt5} \ket{+} + \frac{2}{\sqrt5} \ket{-}$:
 \[
 \begin{aligned}
@@ -105,10 +110,12 @@ H \ket{\Phi}
 
 \section{Aufgabe 1b}
 
-\begin{frame}{Komplexität}
-\textit{"Quantencomputer sind einfach schnellere Rechner, die Probleme beliebiger Komplexität
+\begin{frame}{Aufgabe}
+Diskutieren Sie folgende Aussage: \textit{"Quantencomputer sind einfach schnellere Rechner, die Probleme beliebiger Komplexität
 im Handumdrehen lösen."}
+\end{frame}
 
+\begin{frame}
 Das stimmt nicht.
 
 Quantencomputer können alles berechnen, was normale Computer auch berechnen können, \textbf{aber} sie sind nicht bei jedem Problem schneller.
@@ -123,6 +130,11 @@ Für Quantenalgorithmen gibt es eine eigene Komplexitätsklasse.
 \end{frame}
 
 \section{Aufgabe 1c}
+
+\begin{frame}{Aufgabe}
+Welche Rolle spielen die vier nach Bell benannten Zustände von 2-QuBit-
+Registern im Bereich Quantencomputing?
+\end{frame}
 
 \begin{frame}{Bell Zustände}
 \begin{itemize}
@@ -145,6 +157,11 @@ Für Quantenalgorithmen gibt es eine eigene Komplexitätsklasse.
 \end{frame}
 
 \section{Aufgabe 1d}
+
+\begin{frame}{Aufgabe}
+Beschreiben Sie das SWAP-Gatter. Warum spielt es auf den aktuell verfügbaren
+Quantencomputern (z.B. IBMq) eine besondere Rolle?
+\end{frame}
 
 \begin{frame}{SWAP-Gatter logisch}
 \begin{itemize}
@@ -178,6 +195,20 @@ Echte Quantencomputer ...
 \end{frame}
 
 \section{Aufgabe 2a}
+
+\begin{frame}{Aufgabe}
+Sie sind sich sicher, dass nur einer der folgenden Quantenalgorithmen zur
+Lösung des Problems in Frage kommt.
+\begin{itemize}
+	\item Grover’s Algorithmus
+	\item Shor’s Algorithmus
+	\item Quanten Fourier Transformation
+	\item Simon’s Algorithmus
+\end{itemize}
+Gehen Sie auf jeden dieser Algorithmen kurz ein und wählen Sie einen zur Lösung des
+genannten Problems aus. Erklären Sie dabei insbesondere auch, warum die übrigen
+Algorithmen nicht in Frage kommen.
+\end{frame}
 
 \begin{frame}{Grover's Algorithmus}
 \begin{itemize}
@@ -236,6 +267,10 @@ Echte Quantencomputer ...
 
 \section{Aufgabe 2b}
 
+\begin{frame}{Aufgabe}
+Überlegen und erklären Sie, wie Sie den oben abgebildeten Graphen und den zugehörigen kürzesten Weg (bzw. die kürzesten Wege) in eine Funktion $f$ abbilden können, die zu Ihrem gewählten Algorithmus passt. Im oben abgebildeten Labyrinth ist die Lösung ($S \rightarrow a \rightarrow Z$) durch scharfes Hinsehen ersichtlich; Sie dürfen diese verwenden.
+\end{frame}
+
 \begin{frame}{Überlegung: Optimale Funktion}
 \begin{itemize}
 	\item Mit Grover's Algorithmus erhalten wir für eine Funktion der Form $f: \{0, 1\}^n \rightarrow \{0, 1\}$ eine Eingabe, die eine Ausgabe von 1 erzeugt.
@@ -292,7 +327,11 @@ Z.~B. wird der Pfad $b \rightarrow c \rightarrow a$ als $\ket{001001}$ dargestel
 
 \section{Aufgabe 2c}
 
-\begin{frame}{}
+\begin{frame}{Aufgabe}
+Erstellen Sie den Schaltkreis für die Analyse des obigen Problems inklusive der Orakelfunktion $Uf$. Erläutern Sie, wie man aus Ihrer Funktion $f$ das Gatter $Uf$ konstruiert oder errechnet.
+\end{frame}
+
+\begin{frame}{Schaltkreis}
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{images/2c.png}
@@ -306,7 +345,11 @@ Als Erinnerung $f(x) = \begin{cases}
 
 \section{Aufgabe 2d}
 
-\begin{frame}{}
+\begin{frame}{Aufgabe}
+Diskutieren Sie Ihren Schaltkreis und das Ergebnis.
+\end{frame}
+
+\begin{frame}{Zustände}
 \begin{minipage}[t]{.333\textwidth}
 \centering
 Zustand vor $U_f$:
@@ -331,6 +374,10 @@ Ergebniszustand:
 \end{frame}
 
 \section{Aufgabe 2e}
+
+\begin{frame}{Aufgabe}
+Das Ziel ist vom Start in 4 Schritten erreichbar. Wie viele kürzeste Wege gibt es? \textit{(Hinweis: Es sind maximal 8.)} Erläutern Sie, wie Sie Ihre Funktion $f$ für diesen Graphen abändern müssen und welchen Zustand Sie in den Registern des angepassten Schaltkreises nach der Anwendung des angepassten $U_f$ erwarten.
+\end{frame}
 
 \begin{frame}{Kürzeste Wege}
 Es gibt 7 kürzeste Wege (alphabetisch sortiert):
@@ -395,6 +442,20 @@ Aufeinander folgende X-Gatter können weggelassen werden.
 
 \section{Aufgabe 2f}
 
+\begin{frame}{Aufgabe}
+Skizzieren Sie, wie man die Orakelfunktion konstruieren könnte, wenn der kürzeste Weg bzw. die kürzesten Wege nicht offensichtlich sind. Erläutern Sie außerdem das Vorgehen, wenn auch dessen Länge unbekannt ist.
+
+\textit{
+Hilfreiche Überlegungen:
+\begin{itemize}
+	\item Wie modellieren Sie Knoten und Kanten des Graphen?
+	\item Wie modellieren Sie "gültige" Wege im Graphen?
+	\item Wie modellieren Sie Länge eines Weges?
+	\item Wie können Sie ohne das Wissen über den kürzesten Weg dessen Länge ermitteln?
+\end{itemize}
+}
+\end{frame}
+
 \begin{frame}{Verallgemeinerung des Schaltkreises}
 \begin{itemize}
 	\item Bisherige Annahme: Funktion liefert 1, genau dann, wenn Eingabe der kürzeste Pfad von $S$ zu $Z$.
@@ -443,8 +504,11 @@ Aufeinander folgende X-Gatter können weggelassen werden.
 
 \section{Aufgabe 2g}
 
-\begin{frame}{Laufzeit}
+\begin{frame}{Aufgabe}
+Diskutieren Sie die Laufzeit Ihres Algorithmus (inkl. klassischem Teil, sofern relevant). Diskutieren Sie, ob Sie auf einem aktuellen Quantenchip (z.B. IBMq) einen Quantenvorteil herausholen können.
+\end{frame}
 
+\begin{frame}{Laufzeit}
 Die Laufzeit hängt von der Anzahl der Knoten $V$, der Anzahl der Kanten $E$ und der Länge des zu untersuchenden Pfades $|P|$ ab.
 
 Das Orakel aus 2f benötigt für jede Kante des Pfades eine zu der Anzahl der Knoten logarithmische Anzahl an Operationen pro Kante des Graphes. Das Orakel hat also eine Komplexität von $O(|P| \cdot |E| \cdot log(|V|))$.
@@ -466,6 +530,10 @@ Es ist also nicht offensichtlich, ob der Algorithmus den klassischen Algorithmus
 \end{frame}
 
 \section{Aufgabe 3a}
+
+\begin{frame}{Aufgabe}
+Erläutern Sie anhand eines Beispiel aus der Vorlesung den Begriff Dekohärenz. Welche Maßnahmen werden bei heutigen Quantenchips eingesetzt, um Dekohärenz zu vermeiden?
+\end{frame}
 
 \begin{frame}{Dekohärenz}
 \begin{itemize}
@@ -492,20 +560,47 @@ $\frac{1}{\sqrt2}(\ket{L} \ket{\downarrow} + \ket{R} \ket{\uparrow})$
 \end{minipage}%
 \end{frame}
 
+\begin{frame}{Dekohärenzgleichung}
+\[
+\begin{aligned}
+(\alpha \ket{0} + \beta \ket{e} &\xrightarrow{\text{Interaktion}} \alpha (\ket{0} \ket{e_{00}} + \ket{1} \ket{e_{01}}) + \beta(\ket{0} \ket{e_{10}} + \ket{1} \ket{e_{11}})\\
+&= (\alpha \ket{0} + \beta \ket{1}) \cdot \frac{1}{2}(\ket{e_{00}} + \ket{e_{11}})\\
+&+ (\alpha \ket{0} - \beta \ket{1}) \cdot \frac{1}{2}(\ket{e_{00}} - \ket{e_{11}})\\
+&+ (\alpha \ket{1} + \beta \ket{0}) \cdot \frac{1}{2}(\ket{e_{01}} + \ket{e_{10}})\\
+&+ (\alpha \ket{1} - \beta \ket{0}) \cdot \frac{1}{2}(\ket{e_{01}} - \ket{e_{10}})\\
+\end{aligned}
+\]
+\end{frame}
+
 \begin{frame}{Dekohärenz Vermeidung}
+Wenn man weiß, welche Art von Fehler aufgetreten ist, kann man die Kohärenz (meist) wieder herstellen.
+
+In der Praxis schwer, da solche Fehler überall passieren können.
+
 Um Dekohärenz zu vermeiden werden Quantencomputer stark gekühlt und von äußeren Einflüssen isoliert.
 \end{frame}
 
 \section{Aufgabe 3b}
 
+\begin{frame}{Aufgabe}
+Welche Gegebenheiten/Einschränkungen machen die Fehlerkorrektur in einem
+Quantensystem schwieriger als in einem klassischen System?
+\end{frame}
+
 \begin{frame}{Warum ist Fehlerkorrektur in Quantencomputern schwieriger?}
 \begin{itemize}
 	\item No-Cloning Theorem.
+	\item Viel mehr Arten von Fehlern.
 	\item In einem diskreten System können sich Fehler leichter aufaddieren.
 \end{itemize}
 \end{frame}
 
 \section{Aufgabe 3c}
+
+\begin{frame}{Aufgabe}
+Erklären Sie den Unterschied zwischen den beiden Fehlerarten \textit{Bitflip} und
+\textit{Phaseflip} und wie Sie selbige korrigieren können.
+\end{frame}
 
 \begin{frame}{\textit{Bitflip} vs. \textit{Phaseflip}}
 \begin{itemize}
@@ -525,6 +620,10 @@ Da sowohl das X-Gatter, als auch das Z-Gatter ihre eigenen Inversen sind, könne
 \end{frame}
 
 \section{Aufgabe 3d}
+
+\begin{frame}{Aufgabe}
+Vergleichen Sie die Mechanismen zur Syndromermittlung und Korrektur von \textit{Bitflip} und \textit{Phasenflip} mit der \textit{Dichten Kodierung}. Überlegen Sie, wie Sie auch mit diesen Mechanismen klassische Informationen im Zustand eines QuBits bzw. Quantenregisters speichern oder übertragen können. Diskutieren Sie, ob Ihnen das einen Vorteil gegenüber einem klassischen Speichermedium oder Informationskanal verschafft.
+\end{frame}
 
 \begin{frame}{Dichte Kodierung}
 \end{frame}
